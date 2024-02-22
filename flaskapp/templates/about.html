@@ -1,28 +1,54 @@
-<!doctype html>
-
+<!DOCTYPE html>
 <html lang="">
+
 <head>
-    <title>About</title>
+    <title>Monserrat López</title>
     <meta name="description" content="My home page, on which I showcase my work!">
     <meta name="keywords" content="personal home page">
-<style>
-.myDiv {
-  border: solid darkblue 5px;
-  padding-bottom: 20px;
-  background-color: lightblue;
-  text-align: center;
-  font-family: Sans-serif,sans-serif;
-}
-</style>
+    <style>
+       .myDiv {
+            border: 2px solid black; /* Border color */
+            padding: 50px;
+            background-color: white; /* Background color */
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            margin: 50px auto; /* Center the container */
+            max-width: 400px; /* Limit the width of the container */
+            border-radius: 10px; /* Rounded corners for a modern look */
+        }
+
+        /* Style to make the image round */
+        img {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%; /* Make the image round */
+        }
+    </style>
 </head>
+
 <body>
-<div class="myDiv">
-{% if name %}
-    <h1>{{ name }}</h1>
-{% else %}
-    <h1>About Page</h1>
-{% endif %}
-    This is where you will put the content of this page.
-</div>
+    <div class="myDiv">
+        {% if name %}
+        <h1>{{ name }}</h1>
+        {% else %}
+        <h1>Monserrat López</h1>
+        <h2>Data Scientist</h2>
+        {% endif %}
+        <!-- Image -->
+        <img src="/static/profile-photo.jpg" alt="Monserrat López">
+        <!-- Short description -->
+        <p>
+            I am a Mexican economist pursuing a Master's in Data Science for Public Policy at Hertie School. I have more
+            than six years of experience conducting data-driven research and policy analysis on violence and impunity in
+            Mexico.
+        </p>
+
+        <!-- Social media -->
+        <div>
+            <a href="https://www.linkedin.com/in/monserratlopezperez/" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com/MonLopez_" target="_blank">Twitter</a>
+        </div>
+    </div>
 </body>
+
 </html>
